@@ -16,13 +16,31 @@ public class Cachorro extends Animal {
 		this.setPatas(patas);
 
 	}
-
+	
 	// metodo
+	@Override
+	public void emitirSom()
+	{
+		System.out.println("O cachorro faz au au au");
+	}
+	
+	public void emitirSom(String barulho)
+	{
+		System.out.println("Esse cachorro faz um barulho estranho");
+	}
+	
+
 	public void status()
 	{
-		this.latir();
-		System.out.println("O nome do cachorro é "+ this.getNome() );
+		
+		System.out.println("O nome do cachorro é "+ this.getNome()+ "A idade é " + this.getIdade());
 		this.morde();
+		this.emitirSom();
+		
+	}
+	
+	public void status(int n)
+	{
 		
 	}
 	
@@ -32,10 +50,7 @@ public class Cachorro extends Animal {
 		System.out.println("Cuidado, o cachorro morde!!!");
 	}
 
-	public void latir() {
-		System.out.println("O cachorro late");
-
-	}
+	
 
 	public boolean isCorrer() {
 		return correr;

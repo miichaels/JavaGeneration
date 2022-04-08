@@ -7,7 +7,7 @@ características de forma que tudo o que for comum a todos os animais fique na cl
 Animal:
  */
 
-public class Animal {
+public class Animal implements InterfaceAnimal{
 	// Atributos
 	private String nome;
 	private int idade;
@@ -15,11 +15,21 @@ public class Animal {
 	private int patas;
 
 	// metodos
-	public void aniversario() {
-		this.idade++;
 
+	@Override
+	public void aniversario() {
+		// TODO Auto-generated method stub		
 	}
 
+	@Override
+	public void emitirSom() {
+		System.out.println("Todos animais emitem som");
+		
+	}
+	
+	
+	
+	
 	public int getPatas() {
 		return patas;
 	}
@@ -51,5 +61,8 @@ public class Animal {
 	public void setSom(boolean som) {
 		this.som = som;
 	}
+
+	
+	
 
 }
